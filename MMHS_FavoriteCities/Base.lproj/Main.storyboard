@@ -64,21 +64,8 @@
                     <view key="view" contentMode="scaleToFill" id="tKU-HB-Uns">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xTR-gR-MYa">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </mapView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="xTR-gR-MYa" firstAttribute="leading" secondItem="tKU-HB-Uns" secondAttribute="leading" id="O2Q-tv-uGJ"/>
-                            <constraint firstItem="xTR-gR-MYa" firstAttribute="top" secondItem="tKU-HB-Uns" secondAttribute="top" id="Wpg-wT-KDQ"/>
-                            <constraint firstAttribute="centerX" secondItem="xTR-gR-MYa" secondAttribute="centerX" id="pTF-Ds-FLc"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="mapView" destination="xTR-gR-MYa" id="kQq-fb-XGI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9W-qJ-uu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
