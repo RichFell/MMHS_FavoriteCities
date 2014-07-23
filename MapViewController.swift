@@ -9,20 +9,31 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, UITextFieldDelegate {
+class MapViewController: UIViewController {
 
     var city = String()
     var cities = [String]()
 
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var textField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        textField.delegate = self
+        let geoCoder = CLGeocoder()
+        geoCoder.geocodeAddressString(city, completionHandler: { placeMarks, error in
+            if error
+            {
+                println(error.localizedDescription)
+            }
+            else
+            {
+                let placeMark = placeMarks[0] as CLPlacemark
 
-        moveMapCenter(city)
+                self.mapView.centerCoordinate = placeMark.location.coordinate
+
+                self.mapView.region.span = MKCoordinateSpanMake(1.0, 1.0)
+            }
+            })
 
         for favorite in cities
         {
@@ -50,36 +61,5 @@ class MapViewController: UIViewController, UITextFieldDelegate {
             }
             })
     }
-
-    //UITextFieldDelegate method that is called when user presses Return key in keyboard
-    func textFieldShouldReturn(textField: UITextField!) -> Bool
-    {
-        moveMapCenter(textField.text)
-
-        return true
-    }
-
-    //Helper function for changing the center of the MKMapView
-
-    func moveMapCenter(cityString: String)
-    {
-        let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(cityString, completionHandler: { placeMarks, error in
-            if error
-            {
-                println(error.localizedDescription)
-            }
-            else
-            {
-                let placeMark = placeMarks[0] as CLPlacemark
-
-                self.mapView.centerCoordinate = placeMark.location.coordinate
-
-                self.mapView.region.span = MKCoordinateSpanMake(1.0, 1.0)
-            }
-            })
-    }
-    
-
 
 }

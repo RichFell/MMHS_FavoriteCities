@@ -68,28 +68,16 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xTR-gR-MYa">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="owX-p5-0xb">
-                                <rect key="frame" x="160" y="74" width="280" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="JLp-0W-MaF"/>
-                                    <constraint firstAttribute="width" constant="280" id="nMU-N7-3Vn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="owX-p5-0xb" secondAttribute="centerX" id="3gq-gv-95h"/>
                             <constraint firstItem="xTR-gR-MYa" firstAttribute="leading" secondItem="tKU-HB-Uns" secondAttribute="leading" id="O2Q-tv-uGJ"/>
-                            <constraint firstItem="owX-p5-0xb" firstAttribute="top" secondItem="tKU-HB-Uns" secondAttribute="top" constant="74" id="Va8-21-AK2"/>
                             <constraint firstItem="xTR-gR-MYa" firstAttribute="top" secondItem="tKU-HB-Uns" secondAttribute="top" id="Wpg-wT-KDQ"/>
                             <constraint firstAttribute="centerX" secondItem="xTR-gR-MYa" secondAttribute="centerX" id="pTF-Ds-FLc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="xTR-gR-MYa" id="kQq-fb-XGI"/>
-                        <outlet property="textField" destination="owX-p5-0xb" id="9er-Th-MTo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p9W-qJ-uu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
