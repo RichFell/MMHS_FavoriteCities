@@ -76,7 +76,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var mapVC = segue.destinationViewController as MapViewController
         let indexPath = tableView.indexPathForSelectedRow()
         mapVC.city = favorites[indexPath.row]
-        mapVC.cities = favorites
     }
 
 

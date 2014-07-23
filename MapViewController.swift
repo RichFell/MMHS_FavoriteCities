@@ -12,7 +12,6 @@ import MapKit
 class MapViewController: UIViewController {
 
     var city = String()
-    var cities = [String]()
 
     @IBOutlet weak var mapView: MKMapView!
 
@@ -34,32 +33,8 @@ class MapViewController: UIViewController {
                 self.mapView.region.span = MKCoordinateSpanMake(1.0, 1.0)
             }
             })
-
-        for favorite in cities
-        {
-            createMapAnnotations(favorite)
-        }
     }
 
-    //Helper function that adds the annotations to the map
-    func createMapAnnotations(cityString: String)
-    {
-        let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(cityString, completionHandler: { placemarks, error in
-            if error
-            {
-                println(error.localizedDescription)
-            }
-            else
-            {
-                let placemark = placemarks[0] as CLPlacemark
-                let annotation = MKPointAnnotation()
-                annotation.coordinate = placemark.location.coordinate
-                annotation.title = cityString
 
-                self.mapView.addAnnotation(annotation)
-            }
-            })
-    }
 
 }
