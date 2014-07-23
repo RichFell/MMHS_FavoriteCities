@@ -20,6 +20,8 @@ class MapViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationItem.title = city
+
         textField.delegate = self
 
         moveMapCenter(city)
@@ -55,7 +57,7 @@ class MapViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(textField: UITextField!) -> Bool
     {
         moveMapCenter(textField.text)
-
+        navigationItem.title = textField.text
         return true
     }
 
