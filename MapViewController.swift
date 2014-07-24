@@ -9,14 +9,18 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController
+{
 
-    var city = String()
+    var city : String = ""
 
     @IBOutlet weak var mapView: MKMapView!
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+
+        navigationItem.title = city
 
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(city, completionHandler: { placeMarks, error in
