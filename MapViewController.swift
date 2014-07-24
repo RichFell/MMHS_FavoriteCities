@@ -12,7 +12,7 @@ import MapKit
 class MapViewController: UIViewController, UITextFieldDelegate
 {
 
-    var city = String()
+    var city : String = ""
     var cities : [String] = []
 
     @IBOutlet weak var mapView: MKMapView!
