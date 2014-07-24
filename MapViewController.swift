@@ -9,16 +9,15 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController
+{
 
-    var city = String()
+    var city : String = ""
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
       navigationItem.title = city
     }
-
-
-
 }

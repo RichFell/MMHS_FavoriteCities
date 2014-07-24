@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+{
 
     @IBOutlet var tableView: UITableView!
     var favorites = ["Columbus, OH", "Salt Lake City, UT", "Chicago, IL", "Hatteras, NC"]
@@ -19,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     //Action that shows our UIAlertController which we will use to add data to our Array and UITableView
-    @IBAction func onButtonPressedAddFavorite(sender: AnyObject)
+    @IBAction func onButtonPressedAddFavorite(sender: UIButton)
     {
         let alert = UIAlertController(title: "Add another favorite city", message: nil, preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler({ textField in
