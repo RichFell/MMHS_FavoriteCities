@@ -9,15 +9,17 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, UITextFieldDelegate {
+class MapViewController: UIViewController, UITextFieldDelegate
+{
 
     var city = String()
-    var cities = [String]()
+    var cities : [String] = []
 
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var textField: UITextField!
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         textField.delegate = self
@@ -79,7 +81,4 @@ class MapViewController: UIViewController, UITextFieldDelegate {
             }
             })
     }
-    
-
-
 }
