@@ -49,9 +49,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        let city = favorites[indexPath.row] as String
 
-        cell.textLabel.text = city
+        cell.textLabel.text = favorites[indexPath.row]
 
         return cell
     }
