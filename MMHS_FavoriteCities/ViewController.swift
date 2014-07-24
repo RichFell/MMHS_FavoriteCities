@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     //Action that shows our UIAlertController which we will use to add data to our Array and UITableView
-    @IBAction func onButtonPressedAddFavorite(sender: AnyObject)
+    @IBAction func onButtonPressedAddFavorite(sender: UIBarButtonItem)
     {
         let alert = UIAlertController(title: "Add another favorite city", message: nil, preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler({ textField in
@@ -49,9 +49,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-        let city = favorites[indexPath.row] as String
 
-        cell.textLabel.text = city
+        cell.textLabel.text = favorites[indexPath.row]
 
         return cell
     }
