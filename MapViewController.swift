@@ -9,14 +9,16 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController
+{
 
-    var city = String()
-    var cities = [String]()
+    var city : String = ""
+    var cities : [String] = []
 
     @IBOutlet weak var mapView: MKMapView!
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         let geoCoder = CLGeocoder()

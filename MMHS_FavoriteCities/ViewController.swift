@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+{
 
     @IBOutlet var tableView: UITableView!
     var favorites = ["Columbus, OH", "Salt Lake City, UT", "Chicago, IL", "Hatteras, NC"]
