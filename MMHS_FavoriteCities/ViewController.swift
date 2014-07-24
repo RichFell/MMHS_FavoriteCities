@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+{
 
     @IBOutlet var tableView: UITableView!
     var favorites = ["Columbus, OH", "Salt Lake City, UT", "Chicago, IL", "Hatteras, NC"]
@@ -71,6 +72,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
+    //Method for passing data from one ViewController to another ViewController through the segue.
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
     {
         var mapVC = segue.destinationViewController as MapViewController
