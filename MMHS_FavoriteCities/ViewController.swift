@@ -20,7 +20,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     //Action that shows our UIAlertController which we will use to add data to our Array and UITableView
-    @IBAction func onButtonPressedAddFavorite(sender: AnyObject)
+    @IBAction func onButtonPressedAddFavorite(sender: UIBarButtonItem)
     {
         let alert = UIAlertController(title: "Add another favorite city", message: nil, preferredStyle: .Alert)
         alert.addTextFieldWithConfigurationHandler({ textField in
@@ -72,6 +72,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
 
+    //Method that allows us to pass data from one ViewController to another ViewController through a segue
     override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!)
     {
         var mapVC = segue.destinationViewController as MapViewController
